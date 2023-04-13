@@ -1,0 +1,192 @@
+.circle {
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  padding: 10px;
+  background: #fff;
+  border: 3px solid #000;
+  color: #000;
+  text-align: center;
+  font: 32px Arial, sans-serif;
+}
+.left {
+  left: 20%;
+  margin: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 15px;
+}
+.middle {
+  min-width: 300px;
+  margin-left: 15px;
+  margin-right:25px;
+  transform: translateY(+25%);
+}
+.clickpdfButton {
+  position: absolute;
+  padding: 0;
+  border: none;
+  background: none;
+  font-family: roboto;
+  font-size: 16px;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.dropzone {
+  width: 550px;    
+  text-align: center;
+  border: solid 1px #979797;
+  padding:2rem;
+}
+.dropzone:hover {
+  cursor: pointer;
+  background-color: whitesmoke !important;
+}
+.dropzone2 {
+  width: 600px;    
+  text-align: center;
+  border: solid 1px #979797;
+  padding:0.5rem;
+}
+.dropzone3 {
+  width: 550px;    
+  text-align: center;
+  border: solid 1px #979797;
+  padding:2rem;
+}
+.dropzone3:hover {
+  cursor: pointer;
+  background-color: whitesmoke !important;
+}
+.dropzone4 {
+  width: 600px;    
+  text-align: center;
+  border: solid 1px #979797;
+  padding:0.5rem;
+}
+.removeButton {
+  display: flex;
+  position: relative;
+  right: auto;
+  left: 85%;
+  /* bottom:  25px; */
+  padding: 10px 10px 8px 10px;
+  border: none;
+}
+.name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1E2D54;
+  margin: 0;
+  padding-bottom: 3px;
+  text-align: center;
+}
+
+.size {
+  font-size: 12px;
+  font-weight: 500;
+  color: #a4a4a4;
+  margin: 0;
+  margin-bottom: 0.25rem;
+}
+
+.info {
+  width: 100%;
+  padding-top: 4px;
+}
+
+.userequestform {
+  width: 600px;    
+  height: 500px;
+  text-align: center;
+  border: solid 1px #979797;
+  padding:2rem;
+  box-shadow: #353f4a;
+}
+
+.requestform-stepper {
+  margin-top: 8px;
+}
+
+.mat-mdc-form-field {
+  margin-top: 16px;
+}
+
+.requestform-form-fields {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flipit {
+  display: flex;
+  /* padding: 40px 0; */
+  position: relative;
+  margin-left:auto;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: auto;
+}
+.flipit #first_div {
+  position: relative;
+  top: 100%;
+  /* width: 45%; */
+}
+.flipit #second_div {
+position: relative;
+top: 100%;
+/* width: 45%; */
+}
+
+#first_div {
+  height : 75px;
+}
+#second_div{
+  height : 123px;
+}
+
+.mat-mdc-radio-button.mat-accent {
+  --mdc-radio-selected-focus-icon-color: #2196F3;
+  --mdc-radio-selected-hover-icon-color: #2196F3;
+  --mdc-radio-selected-icon-color: #2196F3;
+  /* --mdc-radio-selected-pressed-icon-color: #2196F3; */
+  --mat-mdc-radio-ripple-color: #000;
+  --mat-mdc-radio-checked-ripple-color: none;
+}
+
+.mat-step-header .mat-step-icon-selected {
+  background-color: #2196F3;
+  color: white;
+}
+
+.mat-step-header .mat-step-icon {
+  background-color: #2196F3;
+  color: white;
+}
+
+.gray {
+  background-color: gray;
+ }
+
+ .mat-raised-button[disabled] {
+  background-color: gray;
+}
+
+.enabledButton{
+  background-color:#1E2D54;
+  color: white;
+  font-family:roboto;
+  font-size: 12px;
+  width: 200px;
+  height: 40px;
+  cursor: pointer;
+}
+.disabledButton{
+  background-color:gray;
+  color: white;
+  font-family:roboto;
+  font-size: 12px;
+  width: 200px;
+  height: 40px; 
+}
+

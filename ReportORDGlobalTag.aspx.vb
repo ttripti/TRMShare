@@ -58,7 +58,7 @@ Public Class ReportORDGlobalTag : Inherits BasePage
     End Sub
 
     Protected Sub btnDecisionType_Click(sender As Object, e As EventArgs)
-        'System.Threading.Thread.Sleep(1000)
+        'System.Threading.Thread.Sleep(10000)
         SortColumn = ""
         SortOrder = GlobalEnums.SortOrder.Ascending
         LoadReportData()
@@ -109,7 +109,7 @@ Public Class ReportORDGlobalTag : Inherits BasePage
 
 #End Region
     <WebMethod(EnableSession:=True)> <ScriptMethod(ResponseFormat:=ResponseFormat.Json)> Public Shared Function generateExcel(selectedDecision As String, selectedSortColumn As String, selectedSortOrder As String) As String
-        ' System.Threading.Thread.Sleep(1000)
+        'System.Threading.Thread.Sleep(10000)
         Dim title As String = "TRM_ORD_Global_Tag_Report_For" + selectedDecision
         Dim fileName As String = Utilities.FileAppendDate(title) & ".xlsx"
         Dim ConnectionString As String = ConfigurationManager.ConnectionStrings("TRMToolDBContext").ToString()
@@ -208,10 +208,11 @@ Public Class ReportORDGlobalTag : Inherits BasePage
         Return sb.ToString()
     End Function
     Public Sub generateWord(selectedDecision As String, selectedSortColumn As String, selectedSortOrder As String)
-
-        Dim fileName As String = "TRM_" & ddlDecisionType.SelectedValue.ToString() & "_ORD_Global_Tag_Report"
-        fileName = Utilities.FileAppendDate(fileName) & ".doc"
-
+        'System.Threading.Thread.Sleep(1000)
+        Dim fileName As String = "TRM_" & ddlDecisionType.SelectedValue.ToString() & "_ORD_Global_Tag_Report.doc"
+        'fileName = Utilities.FileAppendDate(fileName) & ".doc"
+        HttpContext.Current.Response.ContentType = "application/msword"
+        HttpContext.Current.Response.AddHeader("Content-Disposition", "attachment; filename=" & fileName)
         Dim resultList As List(Of GlobalTagReport) = ReportGlobalTagService.GetGlobalTagReport(selectedDecision, wgId, selectedSortColumn, selectedSortOrder)
         For Each rdt As GlobalTagReport In resultList
             If (rdt.tagDefinition = "") Then
